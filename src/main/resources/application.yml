@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /security
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        temp:
+          use_jdbc_metadata_defaults: false
+  datasource:
+    driver_class_name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tramplin_db?useSSL=false
+    username: bestuser
+    password: bestuser
