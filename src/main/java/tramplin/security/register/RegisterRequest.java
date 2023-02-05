@@ -1,4 +1,5 @@
-package tramplin.security.auth;
+package tramplin.security.register;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +10,12 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterResponse {
+public class RegisterRequest {
+
+    private String firstname;
+    private String lastname;
     private String email;
     private String password;
+
+
 }

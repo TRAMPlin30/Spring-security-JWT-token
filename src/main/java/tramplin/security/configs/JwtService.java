@@ -34,7 +34,7 @@ public class JwtService {
                 .parserBuilder()
                 .setSigningKey(getSignInKey())
                 .build()
-                .parseClaimsJwt(token)
+                .parseClaimsJws(token)
                 .getBody();
         // todo "read about interface Claims!
     }
@@ -47,10 +47,10 @@ public class JwtService {
 
 
     public String generateToken(UserDetails userDetails) {
-        return generateToken(new HashMap<>(), userDetails);
+        return generateTokenMain(new HashMap<>(), userDetails);
     }
 
-    public String generateToken(Map<String, Object> claims, UserDetails userDetails) {
+    public String generateTokenMain(Map<String, Object> claims, UserDetails userDetails) {
         return Jwts
                 .builder()
                 .setClaims(claims)

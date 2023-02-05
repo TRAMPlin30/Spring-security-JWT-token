@@ -1,6 +1,5 @@
 package tramplin.security.auth;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,12 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterRequest {
-
-    private String firstname;
-    private String lastname;
+public class AuthenticateRequest {
     private String email;
     private String password;
-
-
 }
